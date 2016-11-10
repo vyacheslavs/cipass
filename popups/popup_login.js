@@ -33,7 +33,7 @@ $(function() {
 			clip_img.style.paddingTop = "10px";
 			clip_img.setAttribute("id", ""+i);
 			clip.appendChild(clip_img);
-			li.append(clip);
+			li.appendChild(clip);
 			clip.setAttribute("id", ""+i);
 			clip.addEventListener('click', function(e) {
 				var id = e.target.id;
