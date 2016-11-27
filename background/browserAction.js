@@ -17,6 +17,10 @@ browserAction.show = function(callback, tab) {
 	chrome.browserAction.setIcon({
 		tabId: tab.id,
 		path: "/icons/19x19/" + browserAction.generateIconName(data.iconType, data.icon)
+	}, function() {
+		if (chrome.runtime.lastError) {
+			return;
+		}
 	});
 
 	if(data.popup) {

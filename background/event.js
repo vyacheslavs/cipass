@@ -46,12 +46,6 @@ event.invoke = function(handler, callback, senderTabId, args, secondTime) {
 	chrome.tabs.get(senderTabId, function(tab) {
 
 		if (chrome.runtime.lastError) {
-			console.log(page.tabs);
-			console.log(chrome.runtime.lastError);
-//			console.log(chrome.runtime.lastError.message);
-//			if(page.tabs[tab.id]) {
-//				delete page.tabs[tab.id];
-//			}
 			return;
 		}
 
